@@ -1,5 +1,5 @@
-name=Playdate C Template
+name=Playdate Renderer
 author=Sam Burkhard
-description=A template made for C playdate projects
+description=
 bundleID=
 imagePath=

@@ -1,6 +1,6 @@
 //
 //  main.c
-// Playdate C Template
+//  Playdate Renderer
 //
 
 #include <stdio.h>
@@ -27,7 +27,7 @@ int eventHandler(PlaydateAPI* pd, PDSystemEvent event, uint32_t arg)
         pd->system->error("%s:%i Couldn't load font %s: %s", __FILE__, __LINE__, fontpath, err);
     
     if ( event == kEventInit ) {
-//        pd->display->setRefreshRate(50);
+        pd->display->setRefreshRate(50);
         pd->system->setUpdateCallback(update, pd);
     }
     
@@ -40,7 +40,7 @@ static int update(void* userdata)
     
     pd->graphics->clear(kColorWhite);
     pd->graphics->setFont(font);
-    pd->graphics->drawText("Playdate C Template!", strlen("Playdate C Template!"), kASCIIEncoding,75, 100);
+    pd->graphics->drawText("Playdate Renderer!", strlen("Playdate Renderer!"), kASCIIEncoding,75, 100);
         
     pd->system->drawFPS(0,0);
 
